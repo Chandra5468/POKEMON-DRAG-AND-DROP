@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Drag and Drop - Catch Pokemon</title>
+  </head>
+  <body>
+    <div class="main">
+      <header>Drag Pokeball to catch All the Pokemon
+          <br>
+          Hover over for sound and pokeball effects &#128517;
+      </header>
+
+      <div class="lists">
+        
+        <div class="all-types">
+          <div class="type" id="fire">
+            <img src="charizard.gif" alt="fire" onmouseover="myplayAudio1()" id="charizard" class="pokeType"/>
+            <audio id="charizardSound">
+              <source src="charizardSound.mp3" />
+            </audio>
+          </div>
+          <div class="type" id="water">
+            <img src="greninja.gif" alt="water" id="greninja" class="pokeType"/>
+          </div>
+
+          <div class="type" id="electric">
+            <img src="pikachu.gif" alt="electric" onmouseover="myplayAudio2()" id="pikachu" class="pokeType"/>
+            <audio id="pikaAudio">
+              <source src="pikachuSound.mp3" />
+            </audio>
+          </div>
+        </div>
+
+        <div class="type balls ">
+          <div class="list-item" draggable="true">
+            <div class="pokeball" onmouseover="myPlayFun()" onmouseout="myPauseFun()" id="ball-1">
+              <div class="innerCircle">
+                <div class="innerMost"></div>
+              </div>
+            </div>
+          </div>
+          <div class="list-item" draggable="true">
+            <div class="pokeball" onmouseover="myPlayFun()" onmouseout="myPauseFun()" id="ball-2">
+              <div class="innerCircle">
+                <div class="innerMost"></div>
+              </div>
+            </div>
+          </div>
+          <div class="list-item" draggable="true">
+            <div class="pokeball" onmouseover="myPlayFun()" onmouseout="myPauseFun()" id="ball-3">
+              <div class="innerCircle">
+                <div class="innerMost"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
